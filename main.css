@@ -167,4 +167,9 @@ footer h6 a {
   article section > div {
     padding: 15px 16px 16px;
   }
+}
+@media screen and (max-width: 835px) {
+  article {
+    grid-template-columns: 1fr;
+  }
 }/*# sourceMappingURL=main.css.map */
