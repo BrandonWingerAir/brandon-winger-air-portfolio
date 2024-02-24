@@ -2,6 +2,8 @@
 
 body {
   height: 100vh;
+  overflow-y: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 header {
@@ -9,6 +11,18 @@ header {
   text-align: center;
   position: fixed;
   width: 100vw;
+  z-index: 1;
+
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 3px;
+
+  span {
+    color: #03a9f4;
+  }
 }
 
 article {
@@ -21,11 +35,59 @@ article {
   section {
     display: flex;
     align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     
     > div {
       margin: 0 auto;
+      padding: 20px 21px 21px;
+      background: rgba($color: white, $alpha: 0.9);
+      border: 1px solid rgba($color: black, $alpha: 0.1);
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      > div {
+        border: 1px solid rgba($color: black, $alpha: 0.25);
+      }
     }
   }
+}
+
+#category-1 {
+  background: linear-gradient(to top, rgba($color: #fafafa, $alpha: 0.95), rgba($color: white, $alpha: 0.95)), url('/images/web-application-coding.jpg') no-repeat center;
+
+  &:hover {
+    background: linear-gradient(to top, rgba($color: #fafafa, $alpha: 0.75), rgba($color: white, $alpha: 0.95)), url('/images/web-application-coding.jpg') no-repeat center;
+  }
+}
+
+#category-2 {
+  background-image: linear-gradient(to top, rgba($color: white, $alpha: 0.95), rgba($color: white, $alpha: 0.95)), url('/images/document-design-software.jpg');
+
+  &:hover {
+    background-image: linear-gradient(to top, rgba($color: white, $alpha: 0.75), rgba($color: white, $alpha: 0.95)), url('/images/document-design-software.jpg');
+  }
+}
+
+#category-3 {
+  background-image: linear-gradient(to top, rgba($color: white, $alpha: 0.95), rgba($color: white, $alpha: 0.95)), url('/images/portable-studio-instruments.jpg');
+
+  &:hover {
+    background-image: linear-gradient(to top, rgba($color: white, $alpha: 0.75), rgba($color: white, $alpha: 0.95)), url('/images/portable-studio-instruments.jpg');
+  }
+}
+
+h2 {
+  font-size: 26px;
+}
+
+h3 {
+  font-size: 15px;
+  letter-spacing: .7px;
+  margin-bottom: 4px;
 }
 
 footer {
@@ -34,4 +96,14 @@ footer {
   text-align: center;
   width: 100vw;
   padding: 35px 0;
+
+  h6 {
+    font-size: 15px;
+    
+    a {
+      font-weight: 600;
+      color: black;
+      text-decoration: none;
+    }
+  }  
 }

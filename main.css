@@ -62,6 +62,8 @@ button {
 
 body {
   height: 100vh;
+  overflow-y: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 header {
@@ -69,6 +71,16 @@ header {
   text-align: center;
   position: fixed;
   width: 100vw;
+  z-index: 1;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+h1 span {
+  color: #03a9f4;
 }
 
 article {
@@ -81,9 +93,52 @@ article {
 article section {
   display: flex;
   align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 article section > div {
   margin: 0 auto;
+  padding: 20px 21px 21px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+article section:hover {
+  cursor: pointer;
+}
+article section:hover > div {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+#category-1 {
+  background: linear-gradient(to top, rgba(250, 250, 250, 0.95), rgba(255, 255, 255, 0.95)), url("/images/web-application-coding.jpg") no-repeat center;
+}
+#category-1:hover {
+  background: linear-gradient(to top, rgba(250, 250, 250, 0.75), rgba(255, 255, 255, 0.95)), url("/images/web-application-coding.jpg") no-repeat center;
+}
+
+#category-2 {
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url("/images/document-design-software.jpg");
+}
+#category-2:hover {
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.95)), url("/images/document-design-software.jpg");
+}
+
+#category-3 {
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url("/images/portable-studio-instruments.jpg");
+}
+#category-3:hover {
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.95)), url("/images/portable-studio-instruments.jpg");
+}
+
+h2 {
+  font-size: 26px;
+}
+
+h3 {
+  font-size: 15px;
+  letter-spacing: 0.7px;
+  margin-bottom: 4px;
 }
 
 footer {
@@ -92,4 +147,12 @@ footer {
   text-align: center;
   width: 100vw;
   padding: 35px 0;
+}
+footer h6 {
+  font-size: 15px;
+}
+footer h6 a {
+  font-weight: 600;
+  color: black;
+  text-decoration: none;
 }/*# sourceMappingURL=main.css.map */
