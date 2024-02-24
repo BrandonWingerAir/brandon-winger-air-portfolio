@@ -47,7 +47,8 @@ article {
     }
 
     &:hover {
-      cursor: pointer;
+      // TODO: Enable after links are setup
+      // cursor: pointer;
 
       > div {
         border: 1px solid rgba($color: black, $alpha: 0.25);
@@ -57,26 +58,26 @@ article {
 }
 
 #category-1 {
-  background: linear-gradient(to top, rgba($color: #fafafa, $alpha: 0.95), rgba($color: white, $alpha: 0.95)), url('/images/web-application-coding.jpg') no-repeat center;
+  background: linear-gradient(to top, rgba($color: #fafafa, $alpha: 0.95), rgba($color: white, $alpha: 0.95)), url('images/web-application-coding.jpg') no-repeat center;
 
   &:hover {
-    background: linear-gradient(to top, rgba($color: #fafafa, $alpha: 0.75), rgba($color: white, $alpha: 0.95)), url('/images/web-application-coding.jpg') no-repeat center;
+    background: linear-gradient(to top, rgba($color: #fafafa, $alpha: 0.75), rgba($color: white, $alpha: 0.95)), url('images/web-application-coding.jpg') no-repeat center;
   }
 }
 
 #category-2 {
-  background-image: linear-gradient(to top, rgba($color: white, $alpha: 0.95), rgba($color: white, $alpha: 0.95)), url('/images/document-design-software.jpg');
+  background-image: linear-gradient(to top, rgba($color: white, $alpha: 0.95), rgba($color: white, $alpha: 0.95)), url('images/document-design-software.jpg');
 
   &:hover {
-    background-image: linear-gradient(to top, rgba($color: white, $alpha: 0.75), rgba($color: white, $alpha: 0.95)), url('/images/document-design-software.jpg');
+    background-image: linear-gradient(to top, rgba($color: white, $alpha: 0.75), rgba($color: white, $alpha: 0.95)), url('images/document-design-software.jpg');
   }
 }
 
 #category-3 {
-  background-image: linear-gradient(to top, rgba($color: white, $alpha: 0.95), rgba($color: white, $alpha: 0.95)), url('/images/portable-studio-instruments.jpg');
+  background-image: linear-gradient(to top, rgba($color: white, $alpha: 0.95), rgba($color: white, $alpha: 0.95)), url('images/portable-studio-instruments.jpg');
 
   &:hover {
-    background-image: linear-gradient(to top, rgba($color: white, $alpha: 0.75), rgba($color: white, $alpha: 0.95)), url('/images/portable-studio-instruments.jpg');
+    background-image: linear-gradient(to top, rgba($color: white, $alpha: 0.75), rgba($color: white, $alpha: 0.95)), url('images/portable-studio-instruments.jpg');
   }
 }
 
@@ -106,4 +107,22 @@ footer {
       text-decoration: none;
     }
   }  
+}
+
+@media screen and (max-width: 1078px) {
+  h2 {
+    font-size: 18px;
+    letter-spacing: .92px;
+  }
+
+  h3 {
+    font-size: 13px;
+  }
+}
+
+
+@media screen and (max-width: 870px) {
+  article section > div {
+    padding: 15px 16px 16px;
+  }
 }
