@@ -60,6 +60,12 @@ button {
   text-indent: 0;
 }
 
+/* Reset Links */
+a {
+  text-decoration: none;
+  color: black;
+}
+
 body {
   height: 100vh;
   overflow-y: hidden;
@@ -85,26 +91,50 @@ h1 span {
 
 article {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   height: 100vh;
   width: 100vw;
   position: fixed;
 }
-article section {
+article a, article section {
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+article a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-article section > div {
-  margin: 0 auto;
+article a .category-box {
   padding: 20px 21px 21px;
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
-article section:hover > div {
+article a:hover .category-box {
   border: 1px solid rgba(0, 0, 0, 0.25);
+}
+article#category-panels {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+article section > div {
+  text-align: center;
+  width: 100%;
+}
+article section > div div {
+  margin-bottom: 16vh;
+}
+article section > div div img {
+  height: 60px;
+  margin: 0 2.5vw;
+}
+article section > div hr {
+  margin: 0 auto 16vh;
+  border-top: 0;
+  width: 70%;
+}
+article section > div > img {
+  width: 190px;
 }
 
 #category-1 {
@@ -163,13 +193,26 @@ footer h6 a {
     font-size: 13px;
   }
 }
+@media screen and (max-width: 956px) {
+  article section > div div {
+    margin-bottom: 10vh;
+  }
+  article section > div div img {
+    position: relative;
+    margin: 0 2.5vh 5vh;
+    bottom: -5vh;
+  }
+  article section > div hr {
+    margin-bottom: 7.5vh;
+  }
+}
 @media screen and (max-width: 870px) {
-  article section > div {
+  .category-box {
     padding: 15px 16px 16px;
   }
 }
 @media screen and (max-width: 835px) {
-  article {
+  article#category-panels {
     grid-template-columns: 1fr;
   }
 }/*# sourceMappingURL=main.css.map */

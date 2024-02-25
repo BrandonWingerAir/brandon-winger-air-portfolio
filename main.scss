@@ -27,31 +27,59 @@ h1 {
 
 article {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   height: 100vh;
   width: 100vw;
   position: fixed;
-
-  section {
+  
+  a, section {
     display: flex;
     align-items: center;
+    justify-content: center;
+  }
+
+  a {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     
-    > div {
-      margin: 0 auto;
+    .category-box {
       padding: 20px 21px 21px;
       background: rgba($color: white, $alpha: 0.9);
       border: 1px solid rgba($color: black, $alpha: 0.1);
     }
 
-    &:hover {
-      // TODO: Enable after links are setup
-      // cursor: pointer;
+    &:hover .category-box {
+      border: 1px solid rgba($color: black, $alpha: 0.25);
+    }
+  }
 
-      > div {
-        border: 1px solid rgba($color: black, $alpha: 0.25);
+  &#category-panels {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  section {
+    > div {
+      text-align: center;
+      width: 100%;
+
+      div {
+        margin-bottom: 16vh;
+  
+        img {
+          height: 60px;
+          margin: 0 2.5vw;
+        }
+      }
+
+      hr {
+        margin: 0 auto 16vh;
+        border-top: 0;
+        width: 70%;
+      }
+
+      > img {
+        width: 190px;
       }
     }
   }
@@ -120,15 +148,32 @@ footer {
   }
 }
 
+@media screen and (max-width: 956px) {
+  article section > div {
+    div {
+      margin-bottom: 10vh;
+
+      img {
+        position: relative;
+        margin: 0 2.5vh 5vh;
+        bottom: -5vh;
+      }
+    }
+    
+    hr {
+      margin-bottom: 7.5vh;
+    }
+  }
+}
 
 @media screen and (max-width: 870px) {
-  article section > div {
+  .category-box {
     padding: 15px 16px 16px;
   }
 }
 
 @media screen and (max-width: 835px) {
-  article {
+  article#category-panels {
     grid-template-columns: 1fr;
   }
 }
