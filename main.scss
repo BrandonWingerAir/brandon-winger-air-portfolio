@@ -14,8 +14,14 @@ header {
   z-index: 1;
 }
 
-.header-border {
+.header-alt {
+  background: #eceff1;
   border-bottom: 1px solid #bdbdbd;
+}
+
+.footer-alt {
+  background: #eceff1;
+  border-top: 1px solid #bdbdbd;
 }
 
 h1 {
@@ -189,6 +195,7 @@ footer {
   article {
     height: 68vh;
     top: 16vh;
+    position: relative;
 
     &#category-panels {
       grid-template-columns: 1fr;
@@ -203,5 +210,21 @@ footer {
         width: 90px;
       }
     }
+
+    a .category-box {
+      background: rgba($color: white, $alpha: 0.975);
+    }
+  }
+
+  #category-1 {
+    background: linear-gradient(to top, rgba($color: #fafafa, $alpha: 0.65), rgba($color: #fafafa, $alpha: 0.65)), url('images/web-application-coding.jpg') no-repeat center;
+  }
+  
+  #category-2 {
+    background-image: linear-gradient(to top, rgba($color: #fafafa, $alpha: 0.65), rgba($color: #fafafa, $alpha: 0.65)), url('images/document-design-software.jpg');
+  }
+  
+  #category-3 {
+    background-image: linear-gradient(to top, rgba($color: #fafafa, $alpha: 0.65), rgba($color: #fafafa, $alpha: 0.65)), url('images/portable-studio-instruments.jpg');
   }
 }
