@@ -80,6 +80,10 @@ header {
   z-index: 1;
 }
 
+.header-border {
+  border-bottom: 1px solid #bdbdbd;
+}
+
 h1 {
   font-size: 30px;
   font-weight: 700;
@@ -113,6 +117,7 @@ article a .category-box {
 }
 article a:hover .category-box {
   border: 1px solid rgba(0, 0, 0, 0.25);
+  background: white;
 }
 article#category-panels {
   grid-template-columns: 1fr 1fr 1fr;
@@ -131,6 +136,7 @@ article section > div div img {
 article section > div hr {
   margin: 0 auto 16vh;
   border-top: 0;
+  border-bottom: 1px solid #9e9e9e;
   width: 70%;
 }
 article section > div > img {
@@ -138,24 +144,24 @@ article section > div > img {
 }
 
 #category-1 {
-  background: linear-gradient(to top, rgba(250, 250, 250, 0.95), rgba(255, 255, 255, 0.95)), url("images/web-application-coding.jpg") no-repeat center;
+  background: linear-gradient(to top, rgba(250, 250, 250, 0.95), rgba(250, 250, 250, 0.95)), url("images/web-application-coding.jpg") no-repeat center;
 }
 #category-1:hover {
-  background: linear-gradient(to top, rgba(250, 250, 250, 0.75), rgba(255, 255, 255, 0.95)), url("images/web-application-coding.jpg") no-repeat center;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.75)), url("images/web-application-coding.jpg") no-repeat center;
 }
 
 #category-2 {
-  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url("images/document-design-software.jpg");
+  background-image: linear-gradient(to top, rgba(250, 250, 250, 0.95), rgba(250, 250, 250, 0.95)), url("images/document-design-software.jpg");
 }
 #category-2:hover {
-  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.95)), url("images/document-design-software.jpg");
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.75)), url("images/document-design-software.jpg");
 }
 
 #category-3 {
-  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url("images/portable-studio-instruments.jpg");
+  background-image: linear-gradient(to top, rgba(250, 250, 250, 0.95), rgba(250, 250, 250, 0.95)), url("images/portable-studio-instruments.jpg");
 }
 #category-3:hover {
-  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.95)), url("images/portable-studio-instruments.jpg");
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.75)), url("images/portable-studio-instruments.jpg");
 }
 
 h2 {
@@ -212,7 +218,24 @@ footer h6 a {
   }
 }
 @media screen and (max-width: 835px) {
+  header, footer {
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+  article {
+    height: 68vh;
+    top: 16vh;
+  }
   article#category-panels {
     grid-template-columns: 1fr;
+  }
+  article section > div div img {
+    height: 45px;
+  }
+  article section > div > img {
+    width: 90px;
   }
 }/*# sourceMappingURL=main.css.map */
