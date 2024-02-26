@@ -184,17 +184,26 @@ footer {
 }
 
 @media screen and (max-width: 835px) {
+  header {
+    border-bottom: 1px solid #bdbdbd;
+  }
+
+  footer {
+    border-top: 1px solid #bdbdbd;
+  }
+  
   header, footer {
-    height: 15vh;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0;
+    background: #eceff1;
   }
 
   article {
-    height: 68vh;
-    top: 16vh;
+    top: 100px;
+    height: calc(100% - 200px);
     position: relative;
 
     &#category-panels {
